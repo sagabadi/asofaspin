@@ -21,6 +21,7 @@ class Home extends BaseController
             $query = $db->query($sql);
             $ceks = $query->getResult();
             if($ceks){
+                $data['relasi'] = $ceks();
         	    echo view('Login/klaim');
             } else {
                 echo view('Login/login');

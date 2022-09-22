@@ -23,7 +23,7 @@
     <div class="wrapper">
       <div id="final-value">
         <div class="fade-in-text">
-          <p>Selamat kamu dapat ${i.value}!</p><p class="text">&nbsp;</p>
+          <p>Selamat kamu dapat <?php echo $relasi[0]->nama_hadiah?>!</p><p class="text">&nbsp;</p>
           <a href="${waMessage}" class="button-17">
             <i class="fa fa-share-alt" aria-hidden="true"></i> Klaim Hadiah Sekarang
           </a>
