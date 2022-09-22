@@ -13,7 +13,7 @@ class Home extends BaseController
         if($cek){
         	return view('Login/login');
         } else {
-        	echo view('errors/html/404');
+        	echo view('errors/404');
         }			
 	}
 }
