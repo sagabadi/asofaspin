@@ -70,8 +70,15 @@ class Link extends BaseController
 		// $id = $this->request->getPost('id');
 		$ins = $event->update_is_claim($key);
 		$ins = $event->edit_relation($key, $id);
+		$lin = $event->get_link_keygen($key);
+
+		$sql = "select nama_hadiah, id_hadiah from relasi_hadiah join hadiah on(relasi_hadiah.id_hadiah = hadiah.id) where keygen = '".$key."'";
+            $query = $db->query($sql);
+            $ceks = $query->getResult();
+
 		$session->setFlashdata('edit', 'Success');
-		return $this->response->redirect('https://wa.me/6285697984834/?text=Halo!%0ASaya%20{nama}%20mau%20klaim%20hadiah%20{namahadiah}.%20Alamat:%20%20{alamat}%20.%20No%20HP:%20{nohp}.%20Terimakasih!');
+		$url = "https://wa.me/6285697984834/?text=Halo!%0ASaya%20{".$lin[0]->nama_buyer."}%20mau%20klaim%20hadiah%20{".$ceks[0]->nama_hadiah."}.%20Alamat:%20%20{".$lin[0]->alamat_buyer."}%20.%20No%20HP:%20{".$lin[0]->hp_buyer."}.%20Terimakasih!"
+		return $this->response->redirect('');
 	}
 
 	public function update_relation(){

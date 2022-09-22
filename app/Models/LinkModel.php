@@ -27,6 +27,14 @@ class LinkModel extends Model{
         return $cek;   
     }
 
+    public function get_link_keygen($keygen){
+        $db      = \Config\Database::connect();
+        $sql = "select * from link_hadiah where keygen = '".$keygen."'";
+        $query = $db->query($sql);
+        $cek = $query->getResult();
+        return $cek;
+    }
+
     public function update_is_claim($keygen){
         $db      = \Config\Database::connect();
         $sql = "update link_hadiah set is_claim = 1 where keygen = '".$keygen."'";
