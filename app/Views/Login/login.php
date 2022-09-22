@@ -33,6 +33,7 @@
       </div>
     </div>
     <?php
+      $key = $keygen;
       $db      = \Config\Database::connect();
       $sql = "select * from hadiah";
       $query = $db->query($sql);
@@ -146,7 +147,7 @@
               spin();
             } else {
               setTimeout(function(){
-                const urls = 'https://asofaspin.88cellgrup.com/update_counter?keygen=20220922131233&id_hadiah='+i.id_hadiah;
+                const urls = 'https://asofaspin.88cellgrup.com/update_counter?keygen='+'<?php echo $key?>'+'&id_hadiah='+i.id_hadiah;
                 $.ajax({
                     url: urls,
                     method:"GET",
@@ -158,7 +159,7 @@
                     // }
                 });
                 // const waMessage = 'https://wa.me/6285697984834/?text=Halo!%0ASaya%20{nama}%20mau%20klaim%20hadiah%20{namahadiah}.%20Alamat:%20%20{alamat}%20.%20No%20HP:%20{nohp}.%20Terimakasih!';
-                const waMessage = 'https://asofaspin.88cellgrup.com/update_is_claim?keygen=20220922131233&id_hadiah='+i.id_hadiah;
+                const waMessage = 'https://asofaspin.88cellgrup.com/update_is_claim?keygen='+'<?php echo $key?>'+'&id_hadiah='+i.id_hadiah;
                 finalValue.innerHTML = 
                 `<div class="fade-in-text">
                   <p>Selamat kamu dapat ${i.value}!</p><p class="text">&nbsp;</p>
@@ -216,8 +217,9 @@
         myFunction();
       }
       function myFunction() {
+        const urls = 'https://asofaspin.88cellgrup.com/add_counter?keygen='+'<?php echo $key?>';
         $.ajax({
-            url:"<?php echo base_url('/add_counter?keygen=20220922131233');?>",
+            url:urls,
             method:"GET",
             // data:{id:id},
             dataType:"JSON",
