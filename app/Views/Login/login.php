@@ -201,6 +201,12 @@
         myFunction();
       }
       function myFunction() {
+        await fetch('/add_counter?keygen=20220922131233', {
+                    method: "GET",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-Requested-With": "XMLHttpRequest"
+                    }
         // $.ajax({
         //     url:"<?php echo base_url('/add_counter?keygen=20220922131233');?>",
         //     method:"GET",
