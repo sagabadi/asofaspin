@@ -68,7 +68,7 @@
       const label_data = [];
       //Object that stores values of minimum and maximum angle for a value
       <?php foreach ($hadiah_all as $v): ?>
-        rotationValues[index]['minDegree'] = min;
+        // rotationValues[index]['minDegree'] = min;
         rotationValues[index]['maxDegree'] = max;
         rotationValues[index]['value'] = <?php echo $v->nama_hadiah?>;
         data[index] = <?php echo $percent?>;
