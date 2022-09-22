@@ -53,8 +53,8 @@
     <!-- Chart JS Plugin for displaying text over chart -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
     <!-- Script -->
-    <!-- <script src="<?= base_url('assets/script.js')?>"></script> -->
-    <script type="text/javascript">
+    <script src="<?= base_url('assets/script.js')?>"></script>
+    <<!-- script type="text/javascript">
       const wheel = document.getElementById("wheel");
       const spinBtn = document.getElementById("spin-btn");
       const finalValue = document.getElementById("final-value");
@@ -204,6 +204,6 @@
         }, 10);
       }
 
-    </script>
+    </script -->>
   </body>
 </html>
