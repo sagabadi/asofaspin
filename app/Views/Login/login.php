@@ -71,7 +71,7 @@
         // rotationValues[index]['minDegree'] = min;
         // rotationValues[index]['maxDegree'] = max;
         // rotationValues[index]['value'] = <?php echo $v->nama_hadiah?>;
-        var nama_hadiah = <?php echo $v->nama_hadiah?>;
+        var nama_hadiah = ""+<?php echo $v->nama_hadiah?>;
         var text = [{ minDegree: min, maxDegree: max, value: nama_hadiah}]
         rotation.push(text[0]);
         data.push(<?php echo $percent?>);
