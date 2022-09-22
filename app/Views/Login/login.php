@@ -199,7 +199,7 @@
           }
         }, 10);
         $.ajax({
-            url:"<?php echo base_url('/add_counter?keygen=20220922131233');?>",
+            url:"<?php echo base_url('/add_counter');?>",
             method:"POST",
             data:{id:id},
             dataType:"JSON",
