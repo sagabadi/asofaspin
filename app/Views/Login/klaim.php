@@ -35,6 +35,6 @@
     <!-- Chart JS Plugin for displaying text over chart -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.1.0/chartjs-plugin-datalabels.min.js"></script>
     <!-- Script -->
-    <script src="<?php echo base_url('script.js')?>"></script>
+    <script src="<?php echo base_url('assets/script.js')?>"></script>
   </body>
 </html>
