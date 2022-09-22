@@ -71,7 +71,7 @@
       //Object that stores values of minimum and maximum angle for a value
       <?php foreach ($hadiah_all as $v): ?>
         var nama_hadiah = '<?php echo $v->nama_hadiah?>';
-        var text = [{ minDegree: min, maxDegree: max, value: nama_hadiah, id_hadiah: <?php echo $v->id_hadiah?>}]
+        var text = [{ minDegree: min, maxDegree: max, value: nama_hadiah, id_hadiah: <?php echo $v->id?>}]
         rotationValues.push(text[0]);
         data.push(Math.floor(<?php echo $percent?>));
         label_data.push('<?php echo $v->nama_hadiah?>');
