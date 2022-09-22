@@ -63,7 +63,7 @@ class Link extends BaseController
 		// $id = $this->request->getPost('id');
 		$ins = $event->update_is_claim($key);
 		$session->setFlashdata('edit', 'Success');
-		return $this->response->redirect('https://wa.me/6285697984834/?text=Halo!%0ASaya%20{nama}%20mau%20klaim%20hadiah%20{namahadiah}.%20Alamat:%20%20{alamat}%20.%20No%20HP:%20{nohp}.%20Terimakasih!'));
+		return $this->response->redirect('https://wa.me/6285697984834/?text=Halo!%0ASaya%20{nama}%20mau%20klaim%20hadiah%20{namahadiah}.%20Alamat:%20%20{alamat}%20.%20No%20HP:%20{nohp}.%20Terimakasih!');
 	}
 
 }
