@@ -62,6 +62,7 @@
       let i = 0;
       var index = 0;
       var min = 0;
+      var nama_hadiah_ = '';
       var max = <?php echo $degree?>;
       const rotationValues = [];
       const data = [];
@@ -73,6 +74,10 @@
         // rotationValues[index]['value'] = <?php echo $v->nama_hadiah?>;
         var nama_hadiah = '<?php echo $v->nama_hadiah?>';
         // nama_hadiah = nama_hadiah.toString();
+        if(index == 0){
+          max = max / 2;
+          $nama_hadiah_ = namahadiah;
+        }
         var text = [{ minDegree: min, maxDegree: max, value: nama_hadiah}]
         rotationValues.push(text[0]);
         data.push(<?php echo $percent?>);
@@ -81,6 +86,8 @@
         min = max + 1;
         max = max + max;
       <?php endforeach; ?>
+      var text = [{ minDegree: min, maxDegree: max, value: nama_hadiah_}]
+      rotationValues.push(text[0]);
       //Size of each piece
       
       //background color for each piece
