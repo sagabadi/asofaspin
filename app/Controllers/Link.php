@@ -52,6 +52,7 @@ class Link extends BaseController
 	}
 
 	public function edit_is_claim(){
+		$db      = \Config\Database::connect();
 		if (isset($_GET['keygen'])) {
             $key = $_GET['keygen'];
         } else {
