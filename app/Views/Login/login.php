@@ -71,7 +71,7 @@
       //Object that stores values of minimum and maximum angle for a value
       <?php foreach ($hadiah_all as $v): ?>
         var nama_hadiah = '<?php echo $v->nama_hadiah?>';
-        var text = [{ minDegree: min, maxDegree: max, value: nama_hadiah}]
+        var text = [{ minDegree: min, maxDegree: max, value: nama_hadiah, id_hadiah: <?php echo $v->id_hadiah?>}]
         rotationValues.push(text[0]);
         data.push(Math.floor(<?php echo $percent?>));
         label_data.push('<?php echo $v->nama_hadiah?>');
@@ -143,7 +143,7 @@
             } else {
               setTimeout(function(){
                 // const waMessage = 'https://wa.me/6285697984834/?text=Halo!%0ASaya%20{nama}%20mau%20klaim%20hadiah%20{namahadiah}.%20Alamat:%20%20{alamat}%20.%20No%20HP:%20{nohp}.%20Terimakasih!';
-                const waMessage = 'https://asofaspin.88cellgrup.com/update_is_claim?keygen=20220922131233'
+                const waMessage = 'https://asofaspin.88cellgrup.com/update_is_claim?keygen=20220922131233&id_hadiah='+i.id_hadiah;
                 finalValue.innerHTML = 
                 `<div class="fade-in-text">
                   <p>Selamat kamu dapat ${i.value}!</p><p class="text">&nbsp;</p>

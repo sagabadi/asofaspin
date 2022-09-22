@@ -35,6 +35,14 @@ class LinkModel extends Model{
         return $cek;   
     }
 
+    public function add_relation($keygen, $id_hadiah){
+        $db      = \Config\Database::connect();
+        $sql = "insert into relasi_hadiah(keygen, id_hadiah) values('".$keygen."', '".$id_hadiah."')";
+        $cek = $db->query($sql);
+        // $cek = $query->getResult();
+        return $cek;   
+    }
+
     public function delete_hadiah($id){
         $db      = \Config\Database::connect();
         $sql = "delete from hadiah where id = ".$id."";
