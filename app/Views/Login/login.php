@@ -66,6 +66,7 @@
       var max = 360;
       const rotationValues = [];
       const data = [];
+      const data_valuable = [];
       const label_data = [];
       //Object that stores values of minimum and maximum angle for a value
       <?php foreach ($hadiah_all as $v): ?>
@@ -79,7 +80,10 @@
         max = max - Math.floor(<?php echo $degree?>);
       <?php endforeach; ?>
       //Size of each piece
-      
+      <?php foreach ($hadiah_valuable as $v): ?>
+        data_valuable.push('<?php echo $v->nama_hadiah?>');
+      <?php endforeach;?>
+
       //background color for each piece
       var pieColors = [
         "#CEE5D0",
@@ -132,7 +136,8 @@
           //if the angleValue is between min and max then display it
           if (angleValue >= i.minDegree && angleValue <= i.maxDegree) {
             //i.value == 'Gamis' || i.value == 'Kemeja'  || i.value == 'Blouse'  || i.value == 'Totebag'
-            if(i.value == 'Gamis'){
+            // if(i.value == 'Gamis'){
+            if(data_valuable.includes(i.value)){
               console.log("N");
               spin();
             } else {
