@@ -22,7 +22,7 @@
     </div>
     <div class="wrapper">
       <div class="container">
-        <canvas id="wheel"></canvas>
+        <canvas id="wheel"></canvas> 
         <button id="spin-btn" onclick="spin()">Spin</button>
         <img src="<?= base_url('assets/spinner-arrow-.svg')?>" class="spinner-arrow" alt="spinner-arrow" />
       </div>
