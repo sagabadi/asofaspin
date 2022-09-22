@@ -44,18 +44,25 @@
       const finalValue = document.getElementById("final-value");
       const buttonWa = document.getElementById("button-wa");
       let i = 0;
+      const index = 0;
+      const min = 0;
+      const max = <?php echo $degree?>;
+      const rotationValues = [];
+      const data = [];
+      const label_data = [];
       //Object that stores values of minimum and maximum angle for a value
-      const rotationValues = [
-        { minDegree: 0, maxDegree: 30, value: "Kemeja" },
-        { minDegree: 31, maxDegree: 90, value: "Blouse" },
-        { minDegree: 91, maxDegree: 150, value: "Totebag" },
-        { minDegree: 151, maxDegree: 210, value: "Gamis" },
-        { minDegree: 211, maxDegree: 270, value: "Tunik" },
-        { minDegree: 271, maxDegree: 330, value: "Jilbab" },
-        { minDegree: 331, maxDegree: 360, value: "Kemeja" },
-      ];
+      <?php foreach ($hadiah_all as $v): ?>
+        rotationValues[index]['minDegree'] = min;
+        rotationValues[index]['maxDegree'] = max;
+        rotationValues[index]['value'] = <?php echo $v->nama_hadiah?>;
+        data[index] = <?php echo $percent?>;
+        label_data[index] = <?php echo $v->nama_hadiah?>;
+        index = index + 1;
+        min = max + 1;
+        max = max + max;
+      <?php endforeach; ?>
       //Size of each piece
-      const data = [16, 16, 16, 16, 16, 16];
+      
       //background color for each piece
       var pieColors = [
         "#CEE5D0",
@@ -74,7 +81,7 @@
         type: "pie",
         data: {
           //Labels(values which are to be displayed on chart)
-          labels: ["klsaf", "lkjsad", "askjal", "Tunik", "Gamis", "asda"],
+          labels: label_data,
           //Settings for dataset/pie
           datasets: [
             {

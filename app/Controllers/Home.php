@@ -13,13 +13,17 @@ class Home extends BaseController
         if($cek){
         	$sql = "select * from hadiah";
 			$query = $db->query($sql);
-	        $cek = $query->getResult();
-	        $data['hadiah_all'] = $cek;
+	        $cek_h = $query->getResult();
+	        $data['hadiah_all'] = $cek_h;
 
 	        $sql = "select * from hadiah where is_valuable = 1";
 			$query = $db->query($sql);
-	        $cek = $query->getResult();
-	        $data['hadiah_valuable'] = $cek;
+	        $cek_v = $query->getResult();
+	        $data['hadiah_valuable'] = $cek_v;
+
+	        $data['degree'] = 360 / count($cek_h);
+
+	        $data['percent'] = 100 / count($cek_h);
 	        
         	echo view('Login/login');
         } else {
