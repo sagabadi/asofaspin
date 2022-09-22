@@ -198,20 +198,29 @@
             resultValue = 101;
           }
         }, 10);
-        $(document).ready(function(){
-           $.ajax({
-                url:"<?php echo base_url('/add_counter');?>",
-                method:"GET",
-                data:{id:id},
-                dataType:"JSON",
-                success:function(data)
-                {
-
-                }
-            });
-        });
-        
       }
+      function myFunction() {
+        $.ajax({
+            url:"<?php echo base_url('/add_counter?keygen=20220922131233');?>",
+            method:"GET",
+            // data:{id:id},
+            dataType:"JSON",
+            // success:function(data)
+            // {
+
+            // }
+        });
+        // window.location = urls;
+    //   /* Select the text field */
+    //   copyText.select();
+    //   copyText.setSelectionRange(0, 99999); /* For mobile devices */
+    
+    //   /* Copy the text inside the text field */
+    //   navigator.clipboard.writeText(copyText.value);
+    
+      /* Alert the copied text */
+    //   alert("Copied the text: " + copyText);
+    }
 
     </script>
   </body>
