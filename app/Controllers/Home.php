@@ -20,7 +20,7 @@ class Home extends BaseController
             $sql = "select nama_hadiah, id_hadiah from relasi_hadiah join hadiah on(relasi_hadiah.id_hadiah = hadiah.id) where keygen = '".$key."'";
             $query = $db->query($sql);
             $ceks = $query->getResult();
-            $data['keygen'] = $keygen;
+            $data['keygen'] = $key;
             if($ceks){
                 $data['relasi'] = $ceks;
         	    echo view('Login/klaim', $data);
