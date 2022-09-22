@@ -6,7 +6,7 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap" rel="stylesheet"/>
     <!-- Font awesome -->
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo base_url('assets/font-awesome/css/font-awesome.min.css')?>">
     <!-- Stylesheet -->
     <link rel="stylesheet" href="<?php echo base_url('assets/style.css')?>" />
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
