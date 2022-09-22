@@ -32,6 +32,22 @@
         <p class="text">Semoga beruntung!</p>
       </div>
     </div>
+    <?php
+      $db      = \Config\Database::connect();
+      $sql = "select * from hadiah";
+      $query = $db->query($sql);
+      $cek_h = $query->getResult();
+      $hadiah_all = $cek_h;
+
+      $sql = "select * from hadiah where is_valuable = 1";
+      $query = $db->query($sql);
+      $cek_v = $query->getResult();
+      $hadiah_valuable = $cek_v;
+
+      $degree = 360 / count($cek_h);
+
+      $percent = 100 / count($cek_h);
+    ?>
     <!-- Chart JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <!-- Chart JS Plugin for displaying text over chart -->
