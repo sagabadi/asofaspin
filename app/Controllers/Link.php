@@ -61,7 +61,7 @@ class Link extends BaseController
 		$session = session();
 		$event = new LinkModel();
 		// $id = $this->request->getPost('id');
-		$ins = $event->update_is_claim($id);
+		$ins = $event->update_is_claim($key);
 		$session->setFlashdata('edit', 'Success');
 	}
 
