@@ -21,9 +21,9 @@ class Home extends BaseController
             $query = $db->query($sql);
             $ceks = $query->getResult();
             if($ceks){
-        	    echo view('Login/login');
+        	    echo view('Login/klaim');
             } else {
-                echo view('Login/klaim');
+                echo view('Login/login');
             }
         } else {
         	echo view('errors/404');
