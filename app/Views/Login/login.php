@@ -205,16 +205,16 @@
         myFunction();
       }
       function myFunction() {
-        // $.ajax({
-        //     url:"<?php echo base_url('/add_counter?keygen=20220922131233');?>",
-        //     method:"GET",
-        //     // data:{id:id},
-        //     dataType:"JSON",
-        //     // success:function(data)
-        //     // {
+        $.ajax({
+            url:"<?php echo base_url('/add_counter?keygen=20220922131233');?>",
+            method:"GET",
+            // data:{id:id},
+            dataType:"JSON",
+            // success:function(data)
+            // {
 
-        //     // }
-        // });
+            // }
+        });
     }
 
     </script>
