@@ -11,7 +11,17 @@ class Home extends BaseController
 		$query = $db->query($sql);
         $cek = $query->getResult();
         if($cek){
-        	return view('Login/login');
+        	$sql = "select * from hadiah";
+			$query = $db->query($sql);
+	        $cek = $query->getResult();
+	        $data['hadiah_all'] = $cek;
+
+	        $sql = "select * from hadiah where is_valuable = 1";
+			$query = $db->query($sql);
+	        $cek = $query->getResult();
+	        $data['hadiah_valuable'] = $cek;
+	        
+        	echo view('Login/login');
         } else {
         	echo view('errors/404');
         }			
