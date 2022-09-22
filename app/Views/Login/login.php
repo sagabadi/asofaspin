@@ -63,7 +63,7 @@
       var index = 0;
       var min = 0;
       var nama_hadiah_ = '';
-      var max = <?php echo $degree?>;
+      var max = Math.floor(<?php echo $degree?>);
       const rotationValues = [];
       const data = [];
       const label_data = [];
@@ -80,7 +80,7 @@
         }
         var text = [{ minDegree: min, maxDegree: max, value: nama_hadiah}]
         rotationValues.push(text[0]);
-        data.push(<?php echo $percent?>);
+        data.push(Math.floor(<?php echo $percent?>));
         label_data.push('<?php echo $v->nama_hadiah?>');
         index = index + 1;
         min = max + 1;
