@@ -61,33 +61,23 @@
       const buttonWa = document.getElementById("button-wa");
       let i = 0;
       var index = 0;
-      var min = 0;
+      var min = 360 - Math.floor(<?php echo $degree?>);
       var nama_hadiah_ = '';
-      var max = Math.floor(<?php echo $degree?>);
+      var max = 360;
       const rotationValues = [];
       const data = [];
       const label_data = [];
       //Object that stores values of minimum and maximum angle for a value
       <?php foreach ($hadiah_all as $v): ?>
-        // rotationValues[index]['minDegree'] = min;
-        // rotationValues[index]['maxDegree'] = max;
-        // rotationValues[index]['value'] = <?php echo $v->nama_hadiah?>;
         var nama_hadiah = '<?php echo $v->nama_hadiah?>';
-        // nama_hadiah = nama_hadiah.toString();
-        if(index == 0){
-          max = max / 2;
-          $nama_hadiah_ = nama_hadiah;
-        }
         var text = [{ minDegree: min, maxDegree: max, value: nama_hadiah}]
         rotationValues.push(text[0]);
         data.push(Math.floor(<?php echo $percent?>));
         label_data.push('<?php echo $v->nama_hadiah?>');
         index = index + 1;
-        min = max + 1;
-        max = max + max;
+        min = min - Math.floor(<?php echo $degree?>);
+        max = max - Math.floor(<?php echo $degree?>);
       <?php endforeach; ?>
-      var text = [{ minDegree: min, maxDegree: max, value: nama_hadiah_}]
-      rotationValues.push(text[0]);
       //Size of each piece
       
       //background color for each piece
