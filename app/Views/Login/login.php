@@ -76,7 +76,7 @@
         // nama_hadiah = nama_hadiah.toString();
         if(index == 0){
           max = max / 2;
-          $nama_hadiah_ = namahadiah;
+          $nama_hadiah_ = nama_hadiah;
         }
         var text = [{ minDegree: min, maxDegree: max, value: nama_hadiah}]
         rotationValues.push(text[0]);
