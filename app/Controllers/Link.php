@@ -75,6 +75,12 @@ class Link extends BaseController
 	}
 
 	public function update_relation(){
+		if (isset($_GET['keygen'])) {
+            $key = $_GET['keygen'];
+        } else {
+        	$key = '1sdad';
+            echo view('errors/404');
+        }
 		if (isset($_GET['id_hadiah'])) {
             $id = $_GET['id_hadiah'];
         } else {
