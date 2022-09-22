@@ -8,7 +8,7 @@
     <!-- Font awesome -->
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="<?php echo base_url('assets/style.css')?>" />
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
   </head>
   <body>
