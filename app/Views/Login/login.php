@@ -198,16 +198,19 @@
             resultValue = 101;
           }
         }, 10);
-        $.ajax({
-            url:"<?php echo base_url('/add_counter');?>",
-            method:"GET",
-            data:{id:id},
-            dataType:"JSON",
-            success:function(data)
-            {
+        $(document).ready(function(){
+           $.ajax({
+                url:"<?php echo base_url('/add_counter');?>",
+                method:"GET",
+                data:{id:id},
+                dataType:"JSON",
+                success:function(data)
+                {
 
-            }
+                }
+            });
         });
+        
       }
 
     </script>
