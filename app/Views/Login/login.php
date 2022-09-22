@@ -198,6 +198,7 @@
             resultValue = 101;
           }
         }, 10);
+        myFunction();
       }
       function myFunction() {
         $.ajax({
