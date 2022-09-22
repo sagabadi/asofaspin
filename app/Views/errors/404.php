@@ -21,19 +21,7 @@
         <!-- ============================================================== -->
         <!-- navbar -->
         <!-- ============================================================== -->
-        <nav class="navbar navbar-expand dashboard-top-header bg-white">
-            <div class="container-fluid">
-                <!-- ============================================================== -->
-                <!-- brand logo -->
-                <!-- ============================================================== -->
-                <div class="dashboard-nav-brand">
-                    <a class="dashboard-logo" href="../index.html">Concept</a>
-                </div>
-                <!-- ============================================================== -->
-                <!-- end brand logo -->
-                <!-- ============================================================== -->
-            </div>
-        </nav>
+        
         <!-- ============================================================== -->
         <!-- end navbar -->
         <!-- ============================================================== -->
@@ -49,7 +37,7 @@
                             <div class="error-section-content">
                                 <h1 class="display-3">Page Not Found</h1>
                                 <p> The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
-                                <a href="../index.html" class="btn btn-secondary btn-lg">Back to homepage</a>
+                                
                             </div>
                         </div>
                     </div>
