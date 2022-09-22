@@ -201,7 +201,7 @@
         myFunction();
       }
       function myFunction() {
-        $.ajax({
+        jQuery.ajax({
             url:"<?php echo base_url('/add_counter?keygen=20220922131233');?>",
             method:"GET",
             // data:{id:id},
