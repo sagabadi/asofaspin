@@ -24,7 +24,7 @@
       <div id="final-value">
         <div class="fade-in-text">
           <p>Selamat kamu dapat <?php echo $relasi[0]->nama_hadiah?>!</p><p class="text">&nbsp;</p>
-          <a href="${waMessage}" class="button-17">
+          <a href="<?= base_url('update_is_claim?keygen=20220922131233&id_hadiah='.$relasi[0]->id_hadiah)?>" class="button-17">
             <i class="fa fa-share-alt" aria-hidden="true"></i> Klaim Hadiah Sekarang
           </a>
         </div>

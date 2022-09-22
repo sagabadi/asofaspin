@@ -17,7 +17,7 @@ class Home extends BaseController
 		$query = $db->query($sql);
         $cek = $query->getResult();
         if($cek){
-            $sql = "select nama_hadiah from relasi_hadiah join hadiah on(relasi_hadiah.id_hadiah = hadiah.id) where keygen = '".$key."'";
+            $sql = "select nama_hadiah, id_hadiah from relasi_hadiah join hadiah on(relasi_hadiah.id_hadiah = hadiah.id) where keygen = '".$key."'";
             $query = $db->query($sql);
             $ceks = $query->getResult();
             if($ceks){
