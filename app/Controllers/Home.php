@@ -9,6 +9,7 @@ class Home extends BaseController
 		if (isset($_GET['keygen'])) {
             $key = $_GET['keygen'];
         } else {
+        	$key = '1sdad';
             echo view('errors/404');
         }
 		$db      = \Config\Database::connect();
