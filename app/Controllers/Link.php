@@ -74,6 +74,16 @@ class Link extends BaseController
 		return $this->response->redirect('https://wa.me/6285697984834/?text=Halo!%0ASaya%20{nama}%20mau%20klaim%20hadiah%20{namahadiah}.%20Alamat:%20%20{alamat}%20.%20No%20HP:%20{nohp}.%20Terimakasih!');
 	}
 
+	public function update_relation(){
+		if (isset($_GET['id_hadiah'])) {
+            $id = $_GET['id_hadiah'];
+        } else {
+        	$id = '1sdad';
+            echo view('errors/404');
+        }
+        $ins = $event->edit_relation($key, $id);
+	}
+
 	public function add_counter(){
 		if (isset($_GET['keygen'])) {
             $key = $_GET['keygen'];

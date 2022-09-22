@@ -42,6 +42,7 @@ $routes->post('/generate', 'Link::generate_link', ['filter' => 'auth']);
 $routes->post('/update_is_copy', 'Link::edit_is_copy', ['filter' => 'auth']);
 $routes->get('/update_is_claim', 'Link::edit_is_claim');
 $routes->get('/add_counter', 'Link::add_counter');
+$routes->get('/update_counter', 'Link::update_relation');
 $routes->post('/store_hadiah', 'Dashboard::add_hadiah', ['filter' => 'auth']);
 $routes->post('/update_hadiah', 'Dashboard::edit_hadiah', ['filter' => 'auth']);
 $routes->post('/delete_hadiah', 'Dashboard::delete_hadiah', ['filter' => 'auth']);
