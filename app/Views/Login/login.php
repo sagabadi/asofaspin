@@ -74,7 +74,7 @@
         var nama_hadiah = '<?php echo $v->nama_hadiah?>';
         // nama_hadiah = nama_hadiah.toString();
         var text = [{ minDegree: min, maxDegree: max, value: nama_hadiah}]
-        rotation.push(text[0]);
+        rotationValues.push(text[0]);
         data.push(<?php echo $percent?>);
         label_data.push(<?php echo $v->nama_hadiah?>);
         index = index + 1;
