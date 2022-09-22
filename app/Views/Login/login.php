@@ -60,9 +60,9 @@
       const finalValue = document.getElementById("final-value");
       const buttonWa = document.getElementById("button-wa");
       let i = 0;
-      const index = 0;
-      const min = 0;
-      const max = <?php echo $degree?>;
+      var index = 0;
+      var min = 0;
+      var max = <?php echo $degree?>;
       const rotationValues = [];
       const data = [];
       const label_data = [];
