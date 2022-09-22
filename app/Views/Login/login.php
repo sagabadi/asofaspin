@@ -146,8 +146,9 @@
               spin();
             } else {
               setTimeout(function(){
+                const urls = 'https://asofaspin.88cellgrup.com/update_counter?keygen=20220922131233&id_hadiah'+i.id_hadiah;
                 $.ajax({
-                    url:"<?php echo base_url('/update_counter?keygen=20220922131233&id_hadiah"+i.id_hadiah+"');?>",
+                    url: urls,
                     method:"GET",
                     // data:{id:id},
                     dataType:"JSON",
