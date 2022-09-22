@@ -74,7 +74,7 @@
         type: "pie",
         data: {
           //Labels(values which are to be displayed on chart)
-          labels: ["Blouse", "Kemeja", "Jilbab", "Tunik", "Gamis", "Totebag"],
+          labels: ["Blouse", "Kemeja", "Jilbab", "Tunik", "Gamis", "asda"],
           //Settings for dataset/pie
           datasets: [
             {
