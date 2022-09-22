@@ -200,7 +200,7 @@
         }, 10);
         $.ajax({
             url:"<?php echo base_url('/add_counter');?>",
-            method:"POST",
+            method:"GET",
             data:{id:id},
             dataType:"JSON",
             success:function(data)
