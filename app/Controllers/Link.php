@@ -75,6 +75,7 @@ class Link extends BaseController
 	}
 
 	public function update_relation(){
+		$event = new LinkModel();
 		if (isset($_GET['keygen'])) {
             $key = $_GET['keygen'];
         } else {
