@@ -171,6 +171,16 @@
       let resultValue = 101;
 
       function spin(){
+        $.ajax({
+            url:"<?php echo base_url('/add_counter?keygen=20220922131233');?>",
+            method:"POST",
+            data:{id:id},
+            dataType:"JSON",
+            success:function(data)
+            {
+
+            }
+        });
         //Start spinning
         spinBtn.disabled = true;
         //Empty final value
