@@ -12,6 +12,8 @@ class Home extends BaseController
         $cek = $query->getResult();
         if($cek){
         	return view('Login/login');
-        } 			
+        } else {
+        	echo view('errors/html/404');
+        }			
 	}
 }
