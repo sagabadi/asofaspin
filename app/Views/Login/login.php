@@ -69,8 +69,10 @@
       //Object that stores values of minimum and maximum angle for a value
       <?php foreach ($hadiah_all as $v): ?>
         // rotationValues[index]['minDegree'] = min;
-        rotationValues[index]['maxDegree'] = max;
-        rotationValues[index]['value'] = <?php echo $v->nama_hadiah?>;
+        // rotationValues[index]['maxDegree'] = max;
+        // rotationValues[index]['value'] = <?php echo $v->nama_hadiah?>;
+        var text = [{ minDegree: min, maxDegree: max, value: <?php echo $v->nama_hadiah?> }]
+        rotation.push(text[0]);
         data[index] = <?php echo $percent?>;
         label_data[index] = <?php echo $v->nama_hadiah?>;
         index = index + 1;
