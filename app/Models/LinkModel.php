@@ -27,6 +27,14 @@ class LinkModel extends Model{
         return $cek;   
     }
 
+    public function update_is_claim($keygen){
+        $db      = \Config\Database::connect();
+        $sql = "update link_hadiah set is_claim = 1 where keygen = '".$keygen."'";
+        $cek = $db->query($sql);
+        // $cek = $query->getResult();
+        return $cek;   
+    }
+
     public function delete_hadiah($id){
         $db      = \Config\Database::connect();
         $sql = "delete from hadiah where id = ".$id."";

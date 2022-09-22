@@ -142,7 +142,8 @@
               spin();
             } else {
               setTimeout(function(){
-                const waMessage = 'https://wa.me/6285697984834/?text=Halo!%0ASaya%20{nama}%20mau%20klaim%20hadiah%20{namahadiah}.%20Alamat:%20%20{alamat}%20.%20No%20HP:%20{nohp}.%20Terimakasih!';
+                // const waMessage = 'https://wa.me/6285697984834/?text=Halo!%0ASaya%20{nama}%20mau%20klaim%20hadiah%20{namahadiah}.%20Alamat:%20%20{alamat}%20.%20No%20HP:%20{nohp}.%20Terimakasih!';
+                const waMessage = 'https://asofaspin.88cellgrup.com/update_is_claim?keygen=20220922131233'
                 finalValue.innerHTML = 
                 `<div class="fade-in-text">
                   <p>Selamat kamu dapat ${i.value}!</p><p class="text">&nbsp;</p>

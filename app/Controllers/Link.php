@@ -51,4 +51,18 @@ class Link extends BaseController
 		// return $this->response->redirect(base_url('/dashboard'));
 	}
 
+	public function edit_is_claim(){
+		if (isset($_GET['keygen'])) {
+            $key = $_GET['keygen'];
+        } else {
+        	$key = '1sdad';
+            echo view('errors/404');
+        }
+		$session = session();
+		$event = new LinkModel();
+		// $id = $this->request->getPost('id');
+		$ins = $event->update_is_claim($id);
+		$session->setFlashdata('edit', 'Success');
+	}
+
 }
