@@ -22,7 +22,7 @@ class Home extends BaseController
             $ceks = $query->getResult();
             if($ceks){
                 $data['relasi'] = $ceks;
-        	    echo view('Login/klaim');
+        	    echo view('Login/klaim', $data);
             } else {
                 echo view('Login/login');
             }
