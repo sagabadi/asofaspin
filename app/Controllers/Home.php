@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-	public function index($key)
+	public function index()
 	{	
 		if (isset($_GET['keygen'])) {
             $key = $_GET['keygen'];
