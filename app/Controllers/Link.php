@@ -77,8 +77,12 @@ class Link extends BaseController
             $query = $db->query($sql);
             $ceks = $query->getResult();
 
+        $sql = "select * from contact where is_use = 1";
+            $query = $db->query($sql);
+            $cekss = $query->getResult();
+
 		$session->setFlashdata('edit', 'Success');
-		$url = "https://wa.me/6285697984834/?text=Halo!%0ASaya%20".$lin[0]->nama_buyer."%20mau%20klaim%20hadiah%20".$ceks[0]->nama_hadiah.".%20Alamat:%20%20".$lin[0]->alamat_buyer."%20.%20No%20HP:%20".$lin[0]->hp_buyer.".%20Terimakasih!";
+		$url = "https://wa.me/".$cekss[0]->masking."/?text=Halo!%0ASaya%20".$lin[0]->nama_buyer."%20mau%20klaim%20hadiah%20".$ceks[0]->nama_hadiah.".%20Alamat:%20%20".$lin[0]->alamat_buyer."%20.%20No%20HP:%20".$lin[0]->hp_buyer.".%20Terimakasih!";
 		return $this->response->redirect($url);
 	}
 
